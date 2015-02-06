@@ -1,4 +1,4 @@
-package templateproject.preferences;
+package templateproject.application.preferences;
 
 import java.io.IOException;
 import java.util.Properties;

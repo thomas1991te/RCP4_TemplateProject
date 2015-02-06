@@ -3,5 +3,5 @@
  * 
  * @author zwickl
  */
-package templateproject.messages;
+package templateproject.application.messages;
 

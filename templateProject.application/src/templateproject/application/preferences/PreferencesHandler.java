@@ -1,4 +1,4 @@
-package templateproject.preferences;
+package templateproject.application.preferences;
 
 import java.util.ArrayList;
 import java.util.Arrays;

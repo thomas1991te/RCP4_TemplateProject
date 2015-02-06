@@ -27,7 +27,7 @@
   </children>
   <handlers xmi:id="_WXoFFCeqEeSglrj4lfG_yQ" elementId="templateProject.application.handler.quitCommand" contributionURI="bundleclass://templateProject.application/templateproject.application.handlers.QuitHandler" command="_WXoFEyeqEeSglrj4lfG_yQ"/>
   <handlers xmi:id="_WXoFHieqEeSglrj4lfG_yQ" elementId="templateProject.application.handler.aboutCommand" contributionURI="bundleclass://templateProject.application/templateproject.application.handlers.AboutHandler" command="_WXoFHSeqEeSglrj4lfG_yQ"/>
-  <handlers xmi:id="_qAVlUCoAEeSN9Jmxv4OthQ" elementId="templateProject.application.handler.preferences" contributionURI="bundleclass://templateProject.application/templateproject.preferences.PreferencesHandler" command="_mouJQCoAEeSN9Jmxv4OthQ"/>
+  <handlers xmi:id="_qAVlUCoAEeSN9Jmxv4OthQ" elementId="templateProject.application.handler.preferences" contributionURI="bundleclass://templateProject.application/templateproject.application.preferences.PreferencesHandler" command="_mouJQCoAEeSN9Jmxv4OthQ"/>
   <bindingTables xmi:id="_WXoFFSeqEeSglrj4lfG_yQ" bindingContext="_WXoFECeqEeSglrj4lfG_yQ">
     <bindings xmi:id="_WXoFFieqEeSglrj4lfG_yQ" keySequence="M1+Q" command="_WXoFEyeqEeSglrj4lfG_yQ"/>
     <bindings xmi:id="_WXoFGSeqEeSglrj4lfG_yQ" keySequence="M1+N"/>

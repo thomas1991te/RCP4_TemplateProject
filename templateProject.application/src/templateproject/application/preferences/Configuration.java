@@ -1,4 +1,4 @@
-package templateproject.preferences;
+package templateproject.application.preferences;
 
 /**
  * Contains the current active configuration of the preference store.

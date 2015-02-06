@@ -31,7 +31,7 @@ public final class E4LifeCycle {
 	@PostContextCreate
 	void postContextCreate(final IEclipseContext workbenchContext) {
 		Locale locale = new Locale("en", "US");
-		workbenchContext.set(ResourceBundle.class, ResourceBundle.getBundle("templateproject.messages.Messages", locale));
+		workbenchContext.set(ResourceBundle.class, ResourceBundle.getBundle("templateproject.application.messages.Messages", locale));
 	}
 
 	/**

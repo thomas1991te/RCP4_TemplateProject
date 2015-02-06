@@ -1,4 +1,4 @@
-package templateproject.preferences;
+package templateproject.application.preferences;
 
 /**
  * Each constant refers to a in the preferences persisted value.

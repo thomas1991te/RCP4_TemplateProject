@@ -3,5 +3,5 @@
  * 
  * @author zwickl
  */
-package templateproject.preferences;
+package templateproject.application.preferences;
 
