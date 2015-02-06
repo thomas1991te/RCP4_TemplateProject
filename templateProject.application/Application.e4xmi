@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_WXneACeqEeSglrj4lfG_yQ" elementId="templateProject.application.app" bindingContexts="_WXoFECeqEeSglrj4lfG_yQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_WXneASeqEeSglrj4lfG_yQ" elementId="templateProject.application" label="Template Application" iconURI="">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_WXoFJyeqEeSglrj4lfG_yQ" selectedElement="_WXoFKCeqEeSglrj4lfG_yQ">
+      <children xsi:type="advanced:Perspective" xmi:id="_WXoFKCeqEeSglrj4lfG_yQ" elementId="templateProject.application" label="Template Project" iconURI=""/>
+    </children>
+    <mainMenu xmi:id="_WXoFICeqEeSglrj4lfG_yQ" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_WXoFISeqEeSglrj4lfG_yQ" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_BVdL4K16EeSEE4HiUrXaEw" elementId="org.fortiss.performance.ba.pure.ui.e4.handledmenuitem.einstellungen" label="Preferences" iconURI="" command="_mouJQCoAEeSN9Jmxv4OthQ"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_WXoFJSeqEeSglrj4lfG_yQ" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_WXoFJieqEeSglrj4lfG_yQ" label="About Template Project" command="_WXoFHSeqEeSglrj4lfG_yQ"/>
+      </children>
+    </mainMenu>
+    <windows xsi:type="basic:Dialog" xmi:id="_l6nOoCoXEeSN9Jmxv4OthQ" elementId="templateProject.application.preferences.preferencesDialog" toBeRendered="false" selectedElement="_D1JHgCxvEeSOuMT6b6RVWg" label="Preferences" iconURI="" width="800">
+      <tags>Preferences</tags>
+      <children xsi:type="basic:PartStack" xmi:id="_D1JHgCxvEeSOuMT6b6RVWg" elementId="templateProject.application.preferences" selectedElement="_br_pECoYEeSN9Jmxv4OthQ">
+        <tags>Preferences</tags>
+        <children xsi:type="basic:Part" xmi:id="_br_pECoYEeSN9Jmxv4OthQ" elementId="org.fortiss.performance.ba.pure.ui.e4.preferences.fortissPure" contributionURI="bundleclass://org.fortiss.performance.ba.pure.ui.e4/org.fortiss.performance.ba.pure.ui.e4.preferences.FortissPURE" label="Default Settings" iconURI="">
+          <handlers xmi:id="_9EATMC0kEeSCs9G5WaCKZw" elementId="org.fortiss.performance.ba.pure.ui.e4.handler.0" contributionURI="bundleclass://org.fortiss.performance.ba.pure.ui.e4/org.fortiss.performance.ba.pure.ui.e4.handlers.QuitHandler" command="_WXoFEyeqEeSglrj4lfG_yQ"/>
+        </children>
+      </children>
+    </windows>
+    <trimBars xmi:id="_WXosICeqEeSglrj4lfG_yQ">
+      <children xsi:type="menu:ToolBar" xmi:id="_WXosISeqEeSglrj4lfG_yQ" elementId="toolbar:org.eclipse.ui.main.toolbar"/>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_WXoFFCeqEeSglrj4lfG_yQ" elementId="templateProject.application.handler.quitCommand" contributionURI="bundleclass://templateProject.application/templateproject.application.handlers.QuitHandler" command="_WXoFEyeqEeSglrj4lfG_yQ"/>
+  <handlers xmi:id="_WXoFHieqEeSglrj4lfG_yQ" elementId="templateProject.application.handler.aboutCommand" contributionURI="bundleclass://templateProject.application/templateproject.application.handlers.AboutHandler" command="_WXoFHSeqEeSglrj4lfG_yQ"/>
+  <handlers xmi:id="_qAVlUCoAEeSN9Jmxv4OthQ" elementId="templateProject.application.handler.preferences" contributionURI="bundleclass://templateProject.application/templateproject.preferences.PreferencesHandler" command="_mouJQCoAEeSN9Jmxv4OthQ"/>
+  <bindingTables xmi:id="_WXoFFSeqEeSglrj4lfG_yQ" bindingContext="_WXoFECeqEeSglrj4lfG_yQ">
+    <bindings xmi:id="_WXoFFieqEeSglrj4lfG_yQ" keySequence="M1+Q" command="_WXoFEyeqEeSglrj4lfG_yQ"/>
+    <bindings xmi:id="_WXoFGSeqEeSglrj4lfG_yQ" keySequence="M1+N"/>
+    <bindings xmi:id="_WXoFHCeqEeSglrj4lfG_yQ" keySequence="M1+I"/>
+    <bindings xmi:id="_WXoFHyeqEeSglrj4lfG_yQ" keySequence="M1+A" command="_WXoFHSeqEeSglrj4lfG_yQ"/>
+  </bindingTables>
+  <rootContext xmi:id="_WXoFECeqEeSglrj4lfG_yQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_WXoFESeqEeSglrj4lfG_yQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_WXoFEieqEeSglrj4lfG_yQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_WXoFEyeqEeSglrj4lfG_yQ" elementId="org.eclipse.ui.file.exit" commandName="quitCommand" category="_HCFPQFj-EeSu1qgiYQ2P0g"/>
+  <commands xmi:id="_WXoFHSeqEeSglrj4lfG_yQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand" category="_HCFPQFj-EeSu1qgiYQ2P0g"/>
+  <commands xmi:id="_mouJQCoAEeSN9Jmxv4OthQ" elementId="org.eclipse.ui.window.preferences" commandName="preferencesCommand" category="_HCFPQFj-EeSu1qgiYQ2P0g"/>
+  <addons xmi:id="_WXneAieqEeSglrj4lfG_yQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_WXneAyeqEeSglrj4lfG_yQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_WXneBCeqEeSglrj4lfG_yQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_WXneBSeqEeSglrj4lfG_yQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_WXneBieqEeSglrj4lfG_yQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_WXneByeqEeSglrj4lfG_yQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_WXneCCeqEeSglrj4lfG_yQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_h-j3sFiZEeSu1qgiYQ2P0g" elementId="templateProject.addon.windowCloseHandler" contributionURI="bundleclass://templateProject.application/templateproject.application.WindowCloseHandler"/>
+  <categories xmi:id="_HCFPQFj-EeSu1qgiYQ2P0g" elementId="templateProject.application.category.window" name="Window" description="All commands to handle window actions"/>
+</application:Application>
