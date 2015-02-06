@@ -12,4 +12,5 @@ templateProject.productConfiguration
 	
 templateProject.application
 
-	This bundle will contain the source files and the application model, which descriebs how your application will look like. With the source files you can add the functionality to each part of the application. 
+	This bundle will contain the source files and the application model, which describes how your application will look like. 
+	With the source files you can add the functionality to each part of the application. 
