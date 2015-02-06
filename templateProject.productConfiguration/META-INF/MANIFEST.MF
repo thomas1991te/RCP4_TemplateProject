@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ProductConfiguration
+Bundle-SymbolicName: templateProject.productConfiguration;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: templateproject.productconfiguration.Activator
+Bundle-Vendor: Thomas Zwickl
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Require-Bundle: templateProject.application;bundle-version="1.0.0"
