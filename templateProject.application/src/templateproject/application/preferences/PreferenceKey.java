@@ -7,9 +7,19 @@ package templateproject.application.preferences;
  * @author tzwickl
  *
  */
-public class PreferenceKey {
+public interface PreferenceKey {
 	/**
-	 * The language of the application.
+	 * The used language.
 	 */
-	public static final String LANGUAGE = "LANGUAGE";
+	String LANGUAGE = "LANGUAGE";
+	
+	/**
+	 * The font family of the application.
+	 */
+	String FONT_FAMILY = "FONT_FAMILY";
+	
+	/**
+	 * The used font size.
+	 */
+	String FONT_SIZE = "FONT_SIZE";
 }

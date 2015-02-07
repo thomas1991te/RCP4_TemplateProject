@@ -34,12 +34,12 @@ public final class PreferencesHandler {
 	/**
 	 * ID of the preference store.
 	 */
-	public static final String preferenceStore = "templateProject.application.preferences";
+	public static final String preferenceStore = "templateproject.application.preferences";
 
 	/**
 	 * ID of the preference page as defined in the application model.
 	 */
-	public static final String preferenceDialog = "templateProject.application.preferences.preferenceDialog";
+	public static final String preferenceDialog = "templateproject.application.preferences.preferencesDialog";
 
 	/**
 	 * Model service.
@@ -106,6 +106,8 @@ public final class PreferencesHandler {
 		prefs.putBoolean("setDefault", false);
 		
 		prefs.put(PreferenceKey.LANGUAGE, DefaultSettings.DEFAULT_LANGUAGE);
+		prefs.put(PreferenceKey.FONT_FAMILY, DefaultSettings.DEFAULT_FONT_FAMILY);
+		prefs.putInt(PreferenceKey.FONT_SIZE, DefaultSettings.DEFAULT_FONT_SIZE);
 
 		// Persists
 		try {
@@ -125,8 +127,38 @@ public final class PreferencesHandler {
 	 */
 	@Inject
 	@Optional
-	public void trackWorkspaceLoc(
+	public void trackLanguage(
 			@Preference(nodePath = preferenceStore, value = PreferenceKey.LANGUAGE) final String language) {
 		Configuration.language = language;
+	}
+	
+	/**
+	 * Tracks the value of {@link PreferenceKey#FONT_FAMILY} and is invoked
+	 * whenever the value of {@link PreferenceKey#FONT_FAMILY} changes and
+	 * saves it in the configuration.
+	 * 
+	 * @param fontFamily
+	 *            The new value of {@link PreferenceKey#FONT_FAMILY}.
+	 */
+	@Inject
+	@Optional
+	public void trackFontFamily(
+			@Preference(nodePath = preferenceStore, value = PreferenceKey.FONT_FAMILY) final String fontFamily) {
+		Configuration.fontFamily = fontFamily;
+	}
+	
+	/**
+	 * Tracks the value of {@link PreferenceKey#FONT_SIZE} and is invoked
+	 * whenever the value of {@link PreferenceKey#FONT_SIZE} changes and
+	 * saves it in the configuration.
+	 * 
+	 * @param fontSize
+	 *            The new value of {@link PreferenceKey#FONT_SIZE}.
+	 */
+	@Inject
+	@Optional
+	public void trackFontSize(
+			@Preference(nodePath = preferenceStore, value = PreferenceKey.FONT_SIZE) final int fontSize) {
+		Configuration.fontSize = fontSize;
 	}
 }

@@ -31,5 +31,25 @@ public abstract class DefaultSettings {
      * Default Language.
      */
     public static final String DEFAULT_LANGUAGE = DEFAULT_PROP.getProperty("DEFAULT_LANGUAGE");
+    
+    /**
+     * Supported Languages.
+     */
+    public static final String SUPPORTED_LANGUAGES = DEFAULT_PROP.getProperty("SUPPORTED_LANGUAGES");
+    
+    /**
+     * The default font family.
+     */
+    public static final String DEFAULT_FONT_FAMILY = DEFAULT_PROP.getProperty("DEFAULT_FONT_FAMILY");
+    
+    /**
+     * The default font size.
+     */
+    public static final int DEFAULT_FONT_SIZE = new Integer(DEFAULT_PROP.getProperty("DEFAULT_FONT_SIZE"));
+    
+    /**
+     * The max font size.
+     */
+    public static final int MAX_FONT_SIZE = new Integer(DEFAULT_PROP.getProperty("MAX_FONT_SIZE"));
 
 }
