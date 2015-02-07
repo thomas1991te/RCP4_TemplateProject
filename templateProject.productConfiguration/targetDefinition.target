@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="targetDefinition" sequenceNumber="2">
+<?pde version="3.8"?><target name="targetDefinition" sequenceNumber="4">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.rcp.feature.group" version="4.4.0.v20140925-0400"/>
 <unit id="org.eclipse.jdt.feature.group" version="3.10.0.v20140925-0400"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.4"/>
+</location>
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.1.v20140901-1055"/>
+<repository location="http://download.eclipse.org/releases/luna/"/>
 </location>
 </locations>
 </target>

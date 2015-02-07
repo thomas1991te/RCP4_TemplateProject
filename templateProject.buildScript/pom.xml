@@ -21,12 +21,18 @@
 		
 		<!-- List here all your used update sites which forms your target platform -->
 		<delta-repo.url>http://download.eclipse.org/eclipse/updates/4.4</delta-repo.url> 
+		<luna-repo.url>http://download.eclipse.org/releases/luna/</luna-repo.url>
 	</properties>
 
 	<repositories>
 		<repository>
 			<id>delta</id>
 			<url>${delta-repo.url}</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>luna</id>
+			<url>${luna-repo.url}</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
