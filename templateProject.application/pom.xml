@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>  
   <modelVersion>4.0.0</modelVersion>
-  <groupId>rcp4TemplateProject</groupId>
+  <groupId>templateProject</groupId>
   <artifactId>templateProject.application</artifactId>
   <version>1.0.0.qualifier</version>
   <packaging>eclipse-plugin</packaging>
   <parent>
-    <groupId>rcp4TemplateProject</groupId>
+    <groupId>templateProject</groupId>
     <artifactId>parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-  	<relativePath>../org.fortiss.performance.ba.pure.build.script/pom.xml</relativePath>
+  	<relativePath>../templateProject.buildScript/pom.xml</relativePath>
  </parent>
 
   <build>
