@@ -4,7 +4,5 @@
 <comment>DefaultSettings</comment>
 <entry key="DEFAULT_LANGUAGE">English</entry>
 <entry key="SUPPORTED_LANGUAGES">English,Deutsch</entry>
-<entry key="DEFAULT_FONT_FAMILY">Helvetica Neue</entry>
-<entry key="DEFAULT_FONT_SIZE">11</entry>
 <entry key="MAX_FONT_SIZE">20</entry>
 </properties>

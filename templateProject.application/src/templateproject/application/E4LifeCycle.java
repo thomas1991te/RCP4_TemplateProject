@@ -3,11 +3,15 @@ package templateproject.application;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import javax.inject.Inject;
+
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.ui.workbench.lifecycle.PostContextCreate;
 import org.eclipse.e4.ui.workbench.lifecycle.PreSave;
 import org.eclipse.e4.ui.workbench.lifecycle.ProcessAdditions;
 import org.eclipse.e4.ui.workbench.lifecycle.ProcessRemovals;
+
+import templateproject.application.editor.EditorServices;
 
 /**
  * This is a stub implementation containing e4 LifeCycle annotated methods.<br />

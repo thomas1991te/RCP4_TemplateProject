@@ -1,5 +1,7 @@
 package templateproject.application.preferences;
 
+import java.net.URI;
+
 /**
  * Contains the current active configuration of the preference store.
  * 
@@ -22,4 +24,9 @@ public class Configuration {
 	 * The current font size.
 	 */
 	public static int fontSize;
+	
+	/**
+	 * The path of the workspace.
+	 */
+	public static URI workspaceLocation;
 }

@@ -1,5 +1,8 @@
 package templateproject.application.preferences;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -97,6 +100,14 @@ public final class PreferencesHandler {
 	@Inject
 	@Optional
 	public void initializePrefStore(@Preference(nodePath = preferenceStore) final IEclipsePreferences prefs) {
+		
+		// Workspace folder
+		try {
+			Configuration.workspaceLocation = this.workspaceLocation.getURL().toURI();
+		} catch (URISyntaxException e1) {
+			e1.printStackTrace();
+		}
+		
 		// Checks if the preference store is already initialized
 		if (!prefs.getBoolean("setDefault", true)) {
 			return;

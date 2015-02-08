@@ -3,6 +3,8 @@ package templateproject.application.preferences;
 import java.io.IOException;
 import java.util.Properties;
 
+import javax.swing.JLabel;
+
 /**
  * This class contains all default values for all settings in the preference
  * store. The default values are loaded at the first start of the RCP
@@ -40,12 +42,12 @@ public abstract class DefaultSettings {
     /**
      * The default font family.
      */
-    public static final String DEFAULT_FONT_FAMILY = DEFAULT_PROP.getProperty("DEFAULT_FONT_FAMILY");
+    public static final String DEFAULT_FONT_FAMILY = new JLabel().getFont().getFamily();
     
     /**
      * The default font size.
      */
-    public static final int DEFAULT_FONT_SIZE = new Integer(DEFAULT_PROP.getProperty("DEFAULT_FONT_SIZE"));
+    public static final int DEFAULT_FONT_SIZE = new JLabel().getFont().getSize();
     
     /**
      * The max font size.
