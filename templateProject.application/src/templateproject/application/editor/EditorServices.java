@@ -60,8 +60,8 @@ public final class EditorServices {
 	 */
 	@PostConstruct
 	public void postConstruct() {
-		editorPartStack = modelService.findElements(application, null, MPartStack.class, Arrays.asList("EditorArea"))
-				.get(0);
+		editorPartStack = modelService.findElements(application, null,
+				MPartStack.class, Arrays.asList("EditorArea")).get(0);
 	}
 
 	/**
@@ -75,14 +75,17 @@ public final class EditorServices {
 	 * @return true if there is an open editor with the given id and label,
 	 *         otherwise false.
 	 */
-	public static boolean checkIfEditorIsOpen(final String id, final Object editorInput) {
+	public static boolean checkIfEditorIsOpen(final String id,
+			final Object editorInput) {
 		Object editorInputObject = editorInput;
-		for (MPart part : modelService.findElements(application, id, MPart.class, null)) {
+		for (MPart part : modelService.findElements(application, id,
+				MPart.class, null)) {
 			if (part.getObject() == null) {
 				continue;
 			}
 			if (!(part.getObject() instanceof Editor)) {
-				throw new ClassCastException("Every editor needs to implement the Editor interface");
+				throw new ClassCastException(
+						"Every editor needs to implement the Editor interface");
 			}
 			Editor editor = (Editor) part.getObject();
 			if (editor != null) {

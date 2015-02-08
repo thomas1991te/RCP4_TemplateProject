@@ -46,7 +46,8 @@ public final class WindowCloseHandler implements IWindowCloseHandler {
 	public void startupComplete(
 			final @UIEventTopic(UIEvents.UILifeCycle.APP_STARTUP_COMPLETE) MApplication application,
 			final EModelService modelService) {
-		MWindow window = (MWindow) modelService.find("templateproject.application", application);
+		MWindow window = (MWindow) modelService.find(
+				"templateproject.application", application);
 		window.getContext().set(IWindowCloseHandler.class, this);
 	}
 

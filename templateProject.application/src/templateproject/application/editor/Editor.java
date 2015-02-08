@@ -13,7 +13,7 @@ public interface Editor {
 	 * @return the input of this {@link Editor}.
 	 */
 	Object getEditorInput();
-	
+
 	/**
 	 * Returns the label of this {@link Editor}.
 	 * 

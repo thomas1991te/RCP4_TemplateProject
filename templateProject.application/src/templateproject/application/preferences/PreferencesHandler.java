@@ -3,7 +3,6 @@ package templateproject.application.preferences;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,20 +76,23 @@ public final class PreferencesHandler {
 	 *            Reference to the Preference Store.
 	 */
 	@Execute
-	public void showPreferenceStore(@Preference(nodePath = preferenceStore) final IEclipsePreferences prefs) {
+	public void showPreferenceStore(
+			@Preference(nodePath = preferenceStore) final IEclipsePreferences prefs) {
 		// Sets the dialog and their parts to be rendered.
-		List<MDialog> dialogs = this.modelService.findElements(this.application, preferenceDialog, MDialog.class, null);
+		List<MDialog> dialogs = this.modelService.findElements(
+				this.application, preferenceDialog, MDialog.class, null);
 		MDialog dialog = dialogs.get(0);
 		dialog.setToBeRendered(true);
 
 		List<String> tags = new ArrayList<String>(Arrays.asList("Preferences"));
-		List<MPartStack> partStack = this.modelService.findElements(dialog, null, MPartStack.class, tags);
+		List<MPartStack> partStack = this.modelService.findElements(dialog,
+				null, MPartStack.class, tags);
 		List<MStackElement> parts = partStack.get(0).getChildren();
 		for (MStackElement part : parts) {
 			part.setToBeRendered(true);
 		}
 	}
-	
+
 	/**
 	 * Determines the current workspace location.
 	 */
@@ -99,7 +101,8 @@ public final class PreferencesHandler {
 		// Workspace folder
 		String url;
 		try {
-			url = URLEncoder.encode(this.workspaceLocation.getURL().getPath(), "UTF-8");
+			url = URLEncoder.encode(this.workspaceLocation.getURL().getPath(),
+					"UTF-8");
 			Configuration.workspaceLocation = new URI(url);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -117,8 +120,9 @@ public final class PreferencesHandler {
 	 */
 	@Inject
 	@Optional
-	public void initializePrefStore(@Preference(nodePath = preferenceStore) final IEclipsePreferences prefs) {
-		
+	public void initializePrefStore(
+			@Preference(nodePath = preferenceStore) final IEclipsePreferences prefs) {
+
 		// Checks if the preference store is already initialized
 		if (!prefs.getBoolean("setDefault", true)) {
 			return;
@@ -126,9 +130,10 @@ public final class PreferencesHandler {
 
 		// Indicates that the preference store has already been initialized
 		prefs.putBoolean("setDefault", false);
-		
+
 		prefs.put(PreferenceKey.LANGUAGE, DefaultSettings.DEFAULT_LANGUAGE);
-		prefs.put(PreferenceKey.FONT_FAMILY, DefaultSettings.DEFAULT_FONT_FAMILY);
+		prefs.put(PreferenceKey.FONT_FAMILY,
+				DefaultSettings.DEFAULT_FONT_FAMILY);
 		prefs.putInt(PreferenceKey.FONT_SIZE, DefaultSettings.DEFAULT_FONT_SIZE);
 
 		// Persists
@@ -141,8 +146,8 @@ public final class PreferencesHandler {
 
 	/**
 	 * Tracks the value of {@link PreferenceKey#LANGUAGE} and is invoked
-	 * whenever the value of {@link PreferenceKey#LANGUAGE} changes and
-	 * saves it in the configuration.
+	 * whenever the value of {@link PreferenceKey#LANGUAGE} changes and saves it
+	 * in the configuration.
 	 * 
 	 * @param language
 	 *            The new value of {@link PreferenceKey#LANGUAGE}.
@@ -153,11 +158,11 @@ public final class PreferencesHandler {
 			@Preference(nodePath = preferenceStore, value = PreferenceKey.LANGUAGE) final String language) {
 		Configuration.language = language;
 	}
-	
+
 	/**
 	 * Tracks the value of {@link PreferenceKey#FONT_FAMILY} and is invoked
-	 * whenever the value of {@link PreferenceKey#FONT_FAMILY} changes and
-	 * saves it in the configuration.
+	 * whenever the value of {@link PreferenceKey#FONT_FAMILY} changes and saves
+	 * it in the configuration.
 	 * 
 	 * @param fontFamily
 	 *            The new value of {@link PreferenceKey#FONT_FAMILY}.
@@ -168,11 +173,11 @@ public final class PreferencesHandler {
 			@Preference(nodePath = preferenceStore, value = PreferenceKey.FONT_FAMILY) final String fontFamily) {
 		Configuration.fontFamily = fontFamily;
 	}
-	
+
 	/**
 	 * Tracks the value of {@link PreferenceKey#FONT_SIZE} and is invoked
-	 * whenever the value of {@link PreferenceKey#FONT_SIZE} changes and
-	 * saves it in the configuration.
+	 * whenever the value of {@link PreferenceKey#FONT_SIZE} changes and saves
+	 * it in the configuration.
 	 * 
 	 * @param fontSize
 	 *            The new value of {@link PreferenceKey#FONT_SIZE}.

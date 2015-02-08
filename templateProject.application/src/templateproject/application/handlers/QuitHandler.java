@@ -26,7 +26,7 @@ public final class QuitHandler {
 	 */
 	@Inject
 	private ResourceBundle resourceBundle;
-	
+
 	/**
 	 * The eclipse global event broker.
 	 */
@@ -63,8 +63,12 @@ public final class QuitHandler {
 	 */
 	@Inject
 	@Optional
-	public void closeApplication(@UIEventTopic(Events.TOPIC_APPLICATION_CLOSE) final Object dummy, final IWorkbench workbench) {
-		if (MessageDialog.openConfirm(null, resourceBundle.getString("quitHandlerTitle"), resourceBundle.getString("quitHandlerMessage"))) {
+	public void closeApplication(
+			@UIEventTopic(Events.TOPIC_APPLICATION_CLOSE) final Object dummy,
+			final IWorkbench workbench) {
+		if (MessageDialog.openConfirm(null,
+				resourceBundle.getString("quitHandlerTitle"),
+				resourceBundle.getString("quitHandlerMessage"))) {
 			workbench.close();
 		}
 	}

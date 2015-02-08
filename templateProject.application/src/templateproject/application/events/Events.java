@@ -15,12 +15,12 @@ public interface Events {
 	 * Closes the application.
 	 */
 	String TOPIC_APPLICATION_CLOSE = "TOPIC_APPLICATION/CLOSE";
-	
+
 	/**
 	 * Restores the general preference page to default.
 	 */
 	String TOPIC_PREFERENCES_GENERAL_RESTORE_DEFAULT = "TOPIC_PREFERENCES/GENERAL/RESTORE_DEFAULT";
-	
+
 	/**
 	 * Applies the changes in the general preference page.
 	 */

@@ -14,17 +14,17 @@ public class Configuration {
 	 * The current language.
 	 */
 	public static String language;
-	
+
 	/**
 	 * The current font family.
 	 */
 	public static String fontFamily;
-	
+
 	/**
 	 * The current font size.
 	 */
 	public static int fontSize;
-	
+
 	/**
 	 * The path of the workspace.
 	 */

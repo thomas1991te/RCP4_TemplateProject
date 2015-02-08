@@ -14,7 +14,7 @@ import org.eclipse.swt.widgets.Shell;
  * @author zwickl
  */
 public final class AboutHandler {
-	
+
 	/**
 	 * Access to the resource bundle.
 	 */
@@ -29,7 +29,9 @@ public final class AboutHandler {
 	 */
 	@Execute
 	public void execute(final Shell shell) {
-		
-		MessageDialog.openInformation(shell, resourceBundle.getString("aboutHandlerTitle"), resourceBundle.getString("aboutHandlerMessage"));
+
+		MessageDialog.openInformation(shell,
+				resourceBundle.getString("aboutHandlerTitle"),
+				resourceBundle.getString("aboutHandlerMessage"));
 	}
 }
