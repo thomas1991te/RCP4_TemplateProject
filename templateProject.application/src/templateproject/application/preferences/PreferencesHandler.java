@@ -1,8 +1,10 @@
 package templateproject.application.preferences;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +34,6 @@ import org.osgi.service.prefs.BackingStoreException;
  * @author zwickl
  *
  */
-@SuppressWarnings("restriction")
 public final class PreferencesHandler {
 	/**
 	 * ID of the preference store.
@@ -89,6 +90,23 @@ public final class PreferencesHandler {
 			part.setToBeRendered(true);
 		}
 	}
+	
+	/**
+	 * Determines the current workspace location.
+	 */
+	@Inject
+	public void setWorkspaceLocation() {
+		// Workspace folder
+		String url;
+		try {
+			url = URLEncoder.encode(this.workspaceLocation.getURL().getPath(), "UTF-8");
+			Configuration.workspaceLocation = new URI(url);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+	}
 
 	/**
 	 * Sets all default values at the first start-up of the application and
@@ -100,13 +118,6 @@ public final class PreferencesHandler {
 	@Inject
 	@Optional
 	public void initializePrefStore(@Preference(nodePath = preferenceStore) final IEclipsePreferences prefs) {
-		
-		// Workspace folder
-		try {
-			Configuration.workspaceLocation = this.workspaceLocation.getURL().toURI();
-		} catch (URISyntaxException e1) {
-			e1.printStackTrace();
-		}
 		
 		// Checks if the preference store is already initialized
 		if (!prefs.getBoolean("setDefault", true)) {
